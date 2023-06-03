@@ -1,0 +1,114 @@
+add_executable(
+        image_processor
+        image_processor.cpp
+        Parser.cpp Parser.h BMPFile.cpp BMPFile.h IO/Reader.cpp IO/Reader.h IO/Writer.cpp IO/Writer.h Filters/Filter.cpp Filters/Filter.h Filters/GrayscaleFilter.cpp Filters/GrayscaleFilter.h Filters/NegativeFilter.cpp Filters/NegativeFilter.h Filters/SharpeningFilter.cpp Filters/SharpeningFilter.h Filters/EdgeDetectionFilter.cpp Filters/EdgeDetectionFilter.h Filters/CropFilter.cpp Filters/CropFilter.h Interface.cpp Interface.h Filters/GaussianBlurFilter.cpp Filters/GaussianBlurFilter.h Image.cpp Image.h Filters/MatrixFilter.cpp Filters/MatrixFilter.h Filters/TwirlFilter.cpp Filters/TwirlFilter.h)
+
+add_catch(image_processor_writer_test
+        Tests/BitwiseFileComprassion.h
+        Tests/WriterTest.cpp
+        Image.h
+        Image.cpp
+        BMPFile.h
+        BMPFile.cpp
+        IO/Reader.h
+        IO/Reader.cpp
+        IO/Writer.h
+        IO/Writer.cpp)
+
+add_catch(image_processor_parser_tests
+        Tests/ParserTest.cpp
+        Parser.h
+        Parser.cpp)
+
+add_catch(image_processor_reader_test
+        Tests/ReaderTest.cpp
+        Image.h
+        Image.cpp
+        BMPFile.h
+        BMPFile.cpp
+        IO/Reader.h
+        IO/Reader.cpp)
+
+add_catch(image_processor_interface_test
+        Tests/InterfaceTest.cpp
+        Image.h
+        Image.cpp
+        Tests/TestImage.h
+        Tests/TestImage.cpp
+        Parser.h
+        Parser.cpp
+        Interface.h
+        Interface.cpp
+        Filters/Filter.h
+        Filters/Filter.cpp
+        Filters/MatrixFilter.h
+        Filters/MatrixFilter.cpp
+        Filters/CropFilter.h
+        Filters/CropFilter.cpp
+        Filters/EdgeDetectionFilter.h
+        Filters/EdgeDetectionFilter.cpp
+        Filters/GaussianBlurFilter.h
+        Filters/GaussianBlurFilter.cpp
+        Filters/GrayscaleFilter.h
+        Filters/GrayscaleFilter.cpp
+        Filters/NegativeFilter.h
+        Filters/NegativeFilter.cpp
+        Filters/SharpeningFilter.h
+        Filters/SharpeningFilter.cpp
+        Filters/TwirlFilter.h
+        Filters/TwirlFilter.cpp)
+
+add_catch(image_processor_filter_test_with_test_image
+        Tests/FiltersTestWithTestImage.cpp
+        Image.h
+        Image.cpp
+        Tests/TestImage.h
+        Tests/TestImage.cpp
+        Filters/Filter.h
+        Filters/Filter.cpp
+        Filters/MatrixFilter.h
+        Filters/MatrixFilter.cpp
+        Filters/CropFilter.h
+        Filters/CropFilter.cpp
+        Filters/EdgeDetectionFilter.h
+        Filters/EdgeDetectionFilter.cpp
+        Filters/GaussianBlurFilter.h
+        Filters/GaussianBlurFilter.cpp
+        Filters/GrayscaleFilter.h
+        Filters/GrayscaleFilter.cpp
+        Filters/NegativeFilter.h
+        Filters/NegativeFilter.cpp
+        Filters/SharpeningFilter.h
+        Filters/SharpeningFilter.cpp
+        Filters/TwirlFilter.h
+        Filters/TwirlFilter.cpp)
+
+add_catch(image_processor_test_with_BMP_image
+        Tests/FiltersTestWithBMPImage.cpp
+        Tests/BitwiseFileComprassion.h
+        IO/Writer.h
+        IO/Writer.cpp
+        IO/Reader.h
+        IO/Reader.cpp
+        Image.h
+        Image.cpp
+        BMPFile.h
+        BMPFile.cpp
+        Filters/Filter.h
+        Filters/Filter.cpp
+        Filters/MatrixFilter.h
+        Filters/MatrixFilter.cpp
+        Filters/CropFilter.h
+        Filters/CropFilter.cpp
+        Filters/EdgeDetectionFilter.h
+        Filters/EdgeDetectionFilter.cpp
+        Filters/GaussianBlurFilter.h
+        Filters/GaussianBlurFilter.cpp
+        Filters/GrayscaleFilter.h
+        Filters/GrayscaleFilter.cpp
+        Filters/NegativeFilter.h
+        Filters/NegativeFilter.cpp
+        Filters/SharpeningFilter.h
+        Filters/SharpeningFilter.cpp
+        Filters/TwirlFilter.h
+        Filters/TwirlFilter.cpp)
